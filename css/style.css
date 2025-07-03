@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #0056b3;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px 0;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+.profil-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.desa-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    float: left; /* Mengapungkan gambar ke kiri */
+    margin-right: 20px; /* Jarak kanan dari gambar ke teks */
+    margin-bottom: 10px; /* Jarak bawah jika teks wrap */
+}
+
+/* Media Queries untuk responsif */
+@media (max-width: 768px) {
+    .desa-image {
+        max-width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    .profil-content {
+        flex-direction: column;
+    }
+}
+
+/* --- Pengaturan Khusus untuk Paragraf di Bagian Profil Desa --- */
+#profil p {
+    font-size: 1.05em;     /* Ukuran font sedikit lebih besar */
+    line-height: 1.7;      /* Jarak antar baris agar tidak terlalu rapat */
+    margin-bottom: 15px;   /* Jarak di bawah setiap paragraf */
+    text-align: justify;   /* Rata kanan-kiri untuk tampilan yang rapi */
+    /* text-indent: 30px; */ /* Opsional: Jika Anda ingin ada indentasi pada baris pertama, hapus komentar ini */
+}
+
+/* Aturan untuk paragraf terakhir di bagian profil agar tidak ada margin-bottom ekstra */
+#profil p:last-of-type {
+    margin-bottom: 0;
+}
