@@ -121,10 +121,13 @@ hr {
 }
 
 .profil-content {
+    /* Aktifkan Flexbox pada wadah (container) gambar */
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
+    /* Pusatkan konten secara horizontal (gambar Anda) */
+    justify-content: center;
+    /* Jika ada lebih dari satu item di masa depan dan Anda ingin mereka bertumpuk
+       sambil tetap di tengah, Anda bisa tambahkan: */
+    /* flex-direction: column; */
 }
 
 .desa-image {
@@ -132,20 +135,51 @@ hr {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    float: left; /* Mengapungkan gambar ke kiri */
-    margin-right: 20px; /* Jarak kanan dari gambar ke teks */
-    margin-bottom: 10px; /* Jarak bawah jika teks wrap */
+    /* Hapus properti float dan margin-right di sini */
+    /* Karena Flexbox di parent sudah mengaturnya */
+    /* float: center;  <-- Hapus ini karena tidak valid */
+    /* margin-right: 20px; <-- Hapus ini */
+    margin-bottom: 10px; /* Jarak bawah jika ada elemen lain setelah gambar */
 }
 
 /* Media Queries untuk responsif */
 @media (max-width: 768px) {
-    .desa-image {
-        max-width: 100%;
-        float: none;
-        margin-right: 0;
+    .container {
+        width: 100%;
+        padding: 0 10px;
     }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
     .profil-content {
         flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .desa-image {
+        max-width: 100%; /* Gambar akan memenuhi lebar container di layar kecil */
+        /* Hapus float: center; di sini juga */
+        /* margin-right: 0; tetap bisa dipakai jika ada margin yang ingin dinolkan */
+    }
+    .profil-content {
+        /* Pastikan flex-direction tetap column di mobile agar gambar di atas teks */
+        flex-direction: column;
+        /* Tambahkan ini jika ingin teks juga ikut terpusat di mobile */
+        align-items: center;
     }
 }
 
