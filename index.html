@@ -6,6 +6,8 @@
     <meta name="description" content="Website resmi Desa Danurojo, Jamuskauman, Ngluwar, Magelang.">
     <title>Desa Danurojo - Ngluwar, Magelang</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <header>
@@ -25,6 +27,8 @@
             </ul>
         </div>
     </nav>
+
+    
 
     <main class="container">
         <section id="profil">
@@ -101,28 +105,54 @@
             <h2>Produk Desa</h2>
             <h3>Bakpia</h3>
             <div class="produk-card">
-                <img src="images/bakpia1.jpg" alt="Bakpia Khas Danurojo" class="produk-image">
-                 <div class="produk-info">
+                 <div class="swiper produk-swiper">
+                    <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/bakpia1.jpg" alt="Bakpia Khas Danurojo" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/bakpia1.jpg" alt="Bakpia Khas Danurojo" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/bakpia1.jpg" alt="Bakpia Khas Danurojo" class="produk-image"></div>
+                    </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+                <div class="produk-info">
                 <p>Bakpia dari Desa Danurojo dibuat dengan resep turun-temurun, menghasilkan perpaduan rasa manis dan gurih dengan tekstur lembut di dalam dan sedikit renyah di luar. Menggunakan bahan-bahan pilihan, bakpia kami cocok sebagai camilan sehari-hari maupun oleh-oleh khas Magelang.</p>
                 </div>
             </div>
 
-            <h3>Kelapa</h3>
+             <h3>Kelapa Muda</h3>
             <div class="produk-card">
-                <img src="images/kelapa1.jpg" alt="kelapa Muda" class="produk-image">
-                <div class="produk-info">
-                <p>Kelapa muda sering disajikan langsung dengan lubang di bagian atas dan sedotan, atau dikupas dan disajikan dalam gelas dengan es. Juga menjadi bahan utama dalam es kelapa muda, jus, dan campuran minuman lainnya seperti es teler atau es buah.</p>
+                <div class="swiper produk-swiper">
+                    <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/kelapa1.jpg" alt="Kelapa Muda" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/kelapa1.jpg" alt="Kelapa Muda" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/kelapa1.jpg" alt="Kelapa Muda" class="produk-image"></div>
+                    </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+                 <div class="produk-info">
+                <p>Kelapa muda sering disajikan langsung dengan lubang di bagian atas dan sedotan, atau dikupas dan disajikan dalam gelas dengan es. Juga menjadi bahan utama dalam es kelapa muda, jus, dan campuran minuman lainnya seperti es teler atau es buah. Buah ini dikenal karena airnya yang menyegarkan dan daging buahnya yang masih lunak serta kenyal.</p>
                 </div>
             </div>
 
             <h3>Bawang Merah</h3>
             <div class="produk-card">
-                <img src="images/brambang1.jpg" alt="Bawang Merah" class="produk-image">
+                <div class="swiper produk-swiper">
+                    <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/brambang1.jpg" alt="Bawang Merah" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/brambang1.jpg" alt="Bawang Merah" class="produk-image"></div>
+                <div class="swiper-slide"><img src="images/brambang1.jpg" alt="Bawang Merah" class="produk-image"></div>
+                    </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
                 <div class="produk-info">
                 <p>Di Desa Danurojo, kegiatan mengupas bawang merah menjadi aktivitas rutin bagi sejumlah ibu-ibu, terutama di pagi hari. Mereka biasanya berkumpul di teras rumah atau tempat pengumpulan hasil pertanian sambil mengupas bawang merah untuk dijual kembali atau sebagai bagian dari proses produksi olahan makanan. Selain menjadi sumber penghasilan tambahan, kegiatan ini juga menjadi momen kebersamaan dan saling berbagi cerita antar warga.</p>
                 </div>
-            </div>
-            
+            </div>           
             </section>
 
             <hr>
@@ -143,5 +173,31 @@
     </footer>
 
     <script src="js/script.js"></script>
+
+    <div class="sosmed-floating">
+  <a href="https://www.instagram.com/danurojourney?igsh=MTB4dHJ1aHZqOGJ3MQ==" target="_blank">
+    <img src="images/Instagram_icon.png" alt="Instagram" width="40">
+  </a>
+  <a href="https://www.tiktok.com/@karangtaruna_danurojo?_t=ZS-8yOd7ZcZtP0&_r=1" target="_blank">
+    <img src="images/Tiktok.png" alt="TikTok" width="40">
+  </a>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Inisialisasi Swiper
+  var swipers = document.querySelectorAll('.produk-swiper');
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      loop: true,
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+    });
+  });
+</script>
+
 </body>
 </html>
