@@ -81,6 +81,9 @@ section h2 {
     margin-bottom: 20px;
 }
 
+section h3 {
+    margin-bottom: auto;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -169,4 +172,37 @@ hr {
 /* Aturan untuk paragraf terakhir di bagian profil agar tidak ada margin-bottom ekstra */
 #profil p:last-of-type {
     margin-bottom: 0;
+}
+
+.produk-card {
+    display: flex;
+    align-items: flex-start; /* Biar rata atas */
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* biar responsif di HP */
+}
+
+.produk-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.produk-info {
+    flex: 1;
+}
+
+.produk-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.produk-info p {
+    margin: 5px 0;
 }
